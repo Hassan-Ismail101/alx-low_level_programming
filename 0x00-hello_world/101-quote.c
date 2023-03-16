@@ -10,7 +10,8 @@
  */
 int main(void)
 {
-	write(1, "and that piece of art is useful\"", strlen("and that piece of art is useful\""));
-	write(1, " - Dora Korpar, 2015-10-19\n", strlen(" - Dora Korpar, 2015-10-19\n"));
+	write(1, "and that piece of art", strlen("and that piece of art"));
+	write(1, " is useful\" - Dora K", strlen(" is useful\" - Dora K"));
+	write(1, "orpar, 2015-10-19\n", strlen("orpar, 2015-10-19\n"));
 	return (1);
 }
