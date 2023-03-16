@@ -3,8 +3,8 @@
 #include <unistd.h>
 
 
-/*
- * main - entry point
+/**
+ * main - Entry point
  *
  * Return: Always 1 (success)
  */
