@@ -6,5 +6,12 @@
  */
 int main(void)
 {
+	char counter = 'z';
+
+	while (counter >= 'a')
+	{
+		putchar(counter--);
+	}
+	putchar('\n');
 	return (0);
 }
