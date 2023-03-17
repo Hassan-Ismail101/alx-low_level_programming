@@ -7,7 +7,8 @@
 int main(void)
 {
 	char counter = 'a';
-	while(counter <= 'z')
+
+	while (counter <= 'z')
 	{
 		putchar(counter++);
 	}
