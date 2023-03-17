@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-
+/**
+ * main - entry point
+ *
+ * Return: Always 0 (success)
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
@@ -21,7 +25,7 @@ int main(void)
 	}
 	else
 	{
-		printf("%i is zero", n);
+		printf("%i is zero\n", n);
 	}
 	return (0);
 }
