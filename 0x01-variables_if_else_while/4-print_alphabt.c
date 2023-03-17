@@ -10,6 +10,7 @@ int main(void)
 
 	while (counter <= 'z')
 	{
+
 		if(counter != 'q' && counter != 'e')
 		{
 			putchar(counter);
