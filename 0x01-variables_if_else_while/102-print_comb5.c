@@ -18,7 +18,7 @@ int main(void)
 				{
 					if (digit3 == 48 && digit4 == 48 && digit2 == 57)
 					{
-						digit3++;
+						digit3 = digit1 + 1;
 						digit4 = 48;
 					}
 					else if (digit3 == 48 && digit4 == 48)
