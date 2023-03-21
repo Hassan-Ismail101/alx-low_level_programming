@@ -1,24 +1,15 @@
 #include "main.h"
 /**
- * _putchar - writes the character c to stdout
- * @c: The character ot print
+ * main - entry point
  *
- * Return; On success 1.
- * on error, -1 is returned, and errno is set appropriately.
+ * Return: Always 0 (success)
  */
-int _putchar(char c)
+int main(void)
 {
-	return(write(1, &c, 1));
-}
-/**
- * _putchars - writes the string *c to stdout
- * @c: The character ot print
- *
- * Return; On success 1.
- * on error, -1 is returned, and errno is set appropriately.
- */
-int _put_chars(void)
-{
-	write(1, "_putchar\n", strlen("_putchar\n"));
-}
+	char *s = "_putchar\n";
+	char ctn;
 
+	for (ctn = 0; s[ctn] != '\0'; ctn++)
+		_putchar(s[ctn]);
+	return (0);
+}
