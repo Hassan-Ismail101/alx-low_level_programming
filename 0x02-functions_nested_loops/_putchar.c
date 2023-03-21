@@ -7,7 +7,19 @@
  * Return; On success 1.
  * on error, -1 is returned, and errno is set appropriately.
  */
-int _puthchar(char c)
+int _putchar(char c)
 {
 	return(write(1, &c, 1));
 }
+/**
+ * _putchars - writes the string *c to stdout
+ * @c: The character ot print
+ *
+ * Return; On success 1.
+ * on error, -1 is returned, and errno is set appropriately.
+ */
+int _puthchars(char *c)
+{
+        return(write(1, c, strlen(c)));
+}
+
