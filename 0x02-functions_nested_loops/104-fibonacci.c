@@ -6,26 +6,42 @@
  */
 void print_fibonacci(int n)
 {
-	long double temp1;
-	long double temp2;
-	long double currentValue;
+	unsigned int temp1_1, temp1_2, temp1_3, CV_1, part;
+	unsigned int temp2_1, temp2_2, temp2_3, CV_2, CV_3;
 
-	temp2 = 1;
-	printf("1, ");
-	temp1 = 2;
-	printf("2, ");
-	n -= 2;
+	part = 100000000;
+	temp1_1 = 1, temp1_2 = 0, temp1_3 = 0;
+	temp2_1 = 0, temp2_2 = 0, temp2_3 = 0;
 	while (n--)
 	{
-		currentValue = temp1 + temp2;
-		if (n == 5)
-			currentValue--;
-		if (n != 0)
-			printf("%.0Lf, ", currentValue);
+		CV_1 = temp1_1 + temp2_1;
+		CV_2 = (temp1_2 + temp2_2) + (CV_1 / part);
+		CV_3 = (temp1_3 + temp2_3) + ((CV_2 / part));
+		CV_1 %= part;
+		CV_2 %= part;
+		if (n == 0)
+		{
+			printf("%i%i%i\n", CV_3, CV_2, CV_1);
+			break;
+		}
+		if (CV_3 > 0)
+		{
+			printf("%i%i%i, ", CV_3, CV_2, CV_1);
+		}
+		else if (CV_2 > 0)
+		{
+			printf("%i%i, ", CV_2, CV_1);
+		}
 		else
-			printf("%.0Lf\n", currentValue + 2);
-		temp2 = temp1;
-		temp1 = currentValue;
+		{
+			printf("%i, ", CV_1);
+		}
+		temp2_1 = temp1_1;
+		temp2_2 = temp1_2;
+		temp2_3 = temp1_3;
+		temp1_1 = CV_1;
+		temp1_2 = CV_2;
+		temp1_3 = CV_3;
 	}
 }
 /**
