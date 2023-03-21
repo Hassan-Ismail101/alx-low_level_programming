@@ -20,16 +20,16 @@ void print_fibonacci(int n)
 		CV_2 %= part;
 		if (n == 0)
 		{
-			printf("%i%.2i%.2i\n", CV_3, CV_2, CV_1);
+			printf("%i%.8i%.8i\n", CV_3, CV_2, CV_1);
 			break;
 		}
 		if (CV_3 > 0)
 		{
-			printf("%i%.2i%.2i, ", CV_3, CV_2, CV_1);
+			printf("%i%.8i%.8i, ", CV_3, CV_2, CV_1);
 		}
 		else if (CV_2 > 0)
 		{
-			printf("%i%.2i, ", CV_2, CV_1);
+			printf("%i%.8i, ", CV_2, CV_1);
 		}
 		else
 		{
