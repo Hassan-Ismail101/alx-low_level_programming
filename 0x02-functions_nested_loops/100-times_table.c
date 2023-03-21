@@ -20,10 +20,14 @@ void print_times_table(int n)
 				result = multiCount * numCounts;
 				_putchar(',');
 				_putchar(' ');
+				if ((result / 100) == 0)
+					_putchar(' ');
+				else
+					_putchar('0' + (result / 100));
 				if ((result / 10) == 0)
 					_putchar(' ');
 				else
-					_putchar('0' + (result / 10));
+					_putchar('0' + ((result % 100) / 10));
 				_putchar((result % 10) + '0');
 			}
 			_putchar('\n');
