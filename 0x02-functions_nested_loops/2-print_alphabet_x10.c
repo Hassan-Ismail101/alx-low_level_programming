@@ -1,44 +1,11 @@
-#include <unistd.h>
-#include <string.h>
-/**
- * _putchar - writes the char to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
- * print_alphabet - writes the alphabet in lowercase
- */
-void print_alphabet(void)
-{
-	char counter;
-
-	for (counter = 'a'; counter <= 'z'; counter++)
-	{
-		_putchar(counter);
-	}
-	_putchar('\n');
-}
+#include "main.h"
 /**
  * print_alphabet_x10 - write print_alphabet (10) times
  */
 void print_alphabet_x10(void)
 {
-	for (counter = 1; counter <= counts; counter++)
+	char counter;
+
+	for (counter = 1; counter <= 10; counter++)
 		print_alphabet();
-}
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
 }
