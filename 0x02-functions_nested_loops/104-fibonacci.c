@@ -6,9 +6,9 @@
  */
 void print_fibonacci(int n)
 {
-	long double temp1;
-	long double temp2;
-	long double currentValue;
+	double temp1;
+	double temp2;
+	double currentValue;
 
 	temp2 = 0;
 	temp1 = 1;
@@ -16,9 +16,9 @@ void print_fibonacci(int n)
 	{
 		currentValue = temp1 + temp2;
 		if (n != 0)
-			printf("%.0Lf, ", currentValue);
+			printf("%.0lf, ", currentValue);
 		else
-			printf("%.0Lf\n", currentValue);
+			printf("%.0lf\n", currentValue);
 		temp2 = temp1;
 		temp1 = currentValue;
 	}
