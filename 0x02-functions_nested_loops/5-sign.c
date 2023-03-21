@@ -1,16 +1,4 @@
-#include <unistd.h>
-#include <string.h>
-/**
- * _putchar - writes the character c to stdout
- * @c: The char to print
- *
- * Return: On success 1
- * On error, -1 is returned, and errno is set apporopriately
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+#include "main.h"
 /**
  * print_sign - test is the sign of number
  * @n: The number to test
@@ -36,35 +24,4 @@ int print_sign(int n)
 		_putchar('-');
 		return (-1);
 	}
-}
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int r;
-
-	r = print_sign(98);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
-	r = print_sign(0);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
-	r = print_sign(0xff);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
-	r = print_sign(-1);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
 }
