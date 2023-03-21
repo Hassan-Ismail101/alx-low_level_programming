@@ -2,6 +2,10 @@
 #include <string.h>
 /**
  * _putchar - writes the char to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1
+ * On error, -1 is returned
  */
 int _putchar(char c)
 {
@@ -13,6 +17,7 @@ int _putchar(char c)
 void print_alphabet(void)
 {
 	char counter;
+
 	for (counter = 'a'; counter <= 'z'; counter++)
 	{
 		_putchar(counter);
