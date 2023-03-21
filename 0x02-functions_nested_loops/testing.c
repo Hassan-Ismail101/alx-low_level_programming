@@ -2,11 +2,10 @@
 #include <limits.h>
 int main(void)
 {
-	int r;
-
-	printf("%d\n", INT_MIN);
-	r = print_last_digit(INT_MIN);
-	_putchar(r + '0');
-	_putchar('\n');
+	print_to_98(90);
+	print_to_98(98);
+	print_to_98(111);
+	print_to_98(81);
+	print_to_98(-10);
 	return (0);
 }
