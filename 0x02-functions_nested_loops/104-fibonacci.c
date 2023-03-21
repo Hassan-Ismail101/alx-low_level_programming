@@ -6,19 +6,22 @@
  */
 void print_fibonacci(int n)
 {
-	double temp1;
-	double temp2;
-	double currentValue;
+	long double temp1;
+	long double temp2;
+	long double currentValue;
 
-	temp2 = 0;
-	temp1 = 1;
+	temp2 = 1;
+	printf("1, ");
+	temp1 = 2;
+	printf("2, ");
+	n -= 2;
 	while (n--)
 	{
 		currentValue = temp1 + temp2;
 		if (n != 0)
-			printf("%.0lf, ", currentValue);
+			printf("%.0Lf, ", currentValue);
 		else
-			printf("%.0lf\n", currentValue);
+			printf("%.0Lf\n", currentValue);
 		temp2 = temp1;
 		temp1 = currentValue;
 	}
