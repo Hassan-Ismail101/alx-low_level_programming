@@ -4,5 +4,5 @@
 #include <string.h>
 #include <stdio.h>
 int _putchar(char c);
-int _putchars(void);
+int _put_chars(void);
 #endif

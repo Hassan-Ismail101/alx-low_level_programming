@@ -17,7 +17,7 @@ int _putchar(char c)
  * Return; On success 1.
  * on error, -1 is returned, and errno is set appropriately.
  */
-int _putchars(void)
+int _put_chars(void)
 {
 	write(1, "_putchar\n", strlen("_putchar\n"));
 }
