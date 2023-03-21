@@ -1,15 +1,23 @@
 #include <unistd.h>
 #include <string.h>
 /**
- * _putchar - writes the character c to stdout
- * @c: The string to print
- *
- * Return: On success 1
- * On error, -1 is returned, and errno is set apporopriately
+ * _putchar - writes the char to stdout
  */
-int _putchar(char *c)
+int _putchar(char c)
 {
-	return (write(1, c, strlen(c)));
+	return (write(1, &c, 1));
+}
+/**
+ * print_alphabet - writes the alphabet in lowercase
+ */
+void print_alphabet(void)
+{
+	char counter;
+	for (counter = 'a'; counter <= 'z'; counter++)
+	{
+		_putchar(counter);
+	}
+	_putchar('\n');
 }
 /**
  * main - check the code
@@ -18,6 +26,6 @@ int _putchar(char *c)
  */
 int main(void)
 {
-	_putchar("_putchar\n");
+	print_alphabet();
 	return (0);
 }
