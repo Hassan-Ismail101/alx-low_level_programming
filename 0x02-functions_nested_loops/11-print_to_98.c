@@ -14,16 +14,20 @@ void print_to_98(int n)
 		{
 			printf("%d", counter);
 			if (counter != 98)
+			{
 				_putchar(',');
 				_putchar(' ');
+			}
 		}
 	else
 		for (counter = n; counter >= 98; counter--)
 		{
 			printf("%d", counter);
 			if (counter != 98)
+			{
 				_putchar(',');
 				_putchar(' ');
+			}
 		}
 	_putchar('\n');
 }
