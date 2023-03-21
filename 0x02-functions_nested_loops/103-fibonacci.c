@@ -9,7 +9,9 @@ void print_even_fibonacci(unsigned long int num)
 	unsigned long int temp1;
 	unsigned long int temp2;
 	unsigned long int currentValue;
+	unsigned long int sum;
 
+	sum = 0;
 	temp2 = 0;
 	temp1 = 1;
 	currentValue = 1;
@@ -18,11 +20,11 @@ void print_even_fibonacci(unsigned long int num)
 		currentValue = temp1 + temp2;
 		temp2 = temp1;
 		temp1 = currentValue;
-		if (temp1 + temp2 < num)
-			printf("%li, ", currentValue);
-		else
+		if (currentValue % 2 == 0)
+			sum += currentValue;
+		if (temp1 + temp2 > num)
 		{
-			printf("%li\n", currentValue);
+			printf("%li\n", sum);
 			break;
 		}
 	}
