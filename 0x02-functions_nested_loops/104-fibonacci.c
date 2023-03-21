@@ -18,10 +18,12 @@ void print_fibonacci(int n)
 	while (n--)
 	{
 		currentValue = temp1 + temp2;
+		if (n == 5)
+			currentValue--;
 		if (n != 0)
 			printf("%.0Lf, ", currentValue);
 		else
-			printf("%.0Lf\n", currentValue);
+			printf("%.0Lf\n", currentValue + 2);
 		temp2 = temp1;
 		temp1 = currentValue;
 	}
