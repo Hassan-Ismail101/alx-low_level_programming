@@ -25,4 +25,5 @@ int main(void)
 		else
 			printf("%d ", counter);
 	}
+	return (0);
 }
