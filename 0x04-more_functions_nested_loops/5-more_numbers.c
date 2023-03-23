@@ -1,24 +1,34 @@
 #include "main.h"
 
 /**
- * most_numbers - print the numbers from '0' to '14'
+ * more_numbers - print the numbers from '0' to '14'
  */
 
-void most_numbers(void)
+void more_numbers(void)
 {
+
+	char loops;
 	char counter;
 	char ch;
 
-	counter = 0;
-	ch = 48;
-	for (counter = 1; counter <= 15; counter++)
+	loops = 10;
+	while (loops--)
 	{
-		if (counter / 10)
-			_putchar('1');
-		_putchar(ch);
-		ch++;
-		if (ch == 58)
-			ch = 48;
+		counter = 0;
+		ch = 48;
+		for (counter = 1; counter <= 15; counter++)
+		{
+			if (counter % 16 > 10)
+				_putchar('1');
+			_putchar(ch);
+			ch++;
+			if (ch == 58)
+				ch = 48;
+			if (counter % 15 == 0)
+			{
+				_putchar('\n');
+				ch = 48;
+			}
+		}
 	}
-	_putchar('\n');
 }
