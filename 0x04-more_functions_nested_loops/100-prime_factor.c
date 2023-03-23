@@ -24,7 +24,7 @@ int main(void)
 {
 	long long counter;
 
-	for (counter = (612852475143 / 12000); counter > 2; counter--)
+	for (counter = (612852475143 / 2); counter > 2; counter--)
 	{
 		if (612852475143 % counter == 0)
 		{
