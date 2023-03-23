@@ -20,11 +20,11 @@ void print_number(int n)
 		}
 		while (part)
 		{
-			if (n / part && flag != 1)
+			if ((n / part) && (flag != 1))
 				flag = 1;
 			if (flag)
 			{
-				_putchar(n / part + 48);
+				_putchar((n / part) + 48);
 			}
 			n %= part;
 			part /= 10;
