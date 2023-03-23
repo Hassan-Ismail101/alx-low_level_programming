@@ -4,7 +4,7 @@
  * most_numbers - print the numbers from '0' to '14'
  */
 
-void print_most_numbers(void)
+void most_numbers(void)
 {
 	char counter;
 	char ch;
