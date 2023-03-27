@@ -10,9 +10,8 @@
 
 int main(void)
 {
-	int pass;
+	time_t t;
 
-	srand(time());
-	pass = rand();
+	srand((unsigned) time(&t));
 	return (0);
 }
