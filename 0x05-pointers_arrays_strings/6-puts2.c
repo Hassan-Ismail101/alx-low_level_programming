@@ -9,7 +9,8 @@ void puts2(char *str)
 {
 	int counter;
 
-	while (*(str + counter) != '\0' && (*(str + counter - 1) != '\0'))
+	counter = 0;
+	while ((*(str + counter) != '\0') && (*(str + counter - 1) != '\0'))
 	{
 		_putchar(*(str + counter));
 		counter += 2;

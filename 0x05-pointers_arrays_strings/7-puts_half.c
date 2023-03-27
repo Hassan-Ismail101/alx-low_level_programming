@@ -2,7 +2,7 @@
 
 /**
  * puts_half - function used to print the last half of string
- * @s: pointer to the string
+ * @str: pointer to the string
  */
 
 void puts_half(char *str)
@@ -13,7 +13,15 @@ void puts_half(char *str)
 	len = 0;
 	while (*(str + len) != '\0')
 		len++;
-	for (counter = (len / 2); counter < len; counter++)
-		_putchar(*(str + counter));
+	if (len % 2 == 0)
+	{
+		for (counter = (len / 2); counter < len; counter++)
+			_putchar(*(str + counter));
+	}
+	else
+	{
+		for (counter = (len / 2) + 1; counter < len; counter++)
+			_putchar(*(str + counter));
+	}
 	_putchar('\n');
 }
