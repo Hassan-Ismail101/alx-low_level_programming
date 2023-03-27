@@ -24,14 +24,15 @@ int _atoi(char *s)
 			mines++;
 		if (*(s + itr) >= '0' && *(s + itr) <= '9')
 		{
-			num = (num * 10) + (*(s + itr) - 48);
+			if (mines % 2 != 0)
+				num = (num * 10) - (*(s +itr) - 48);
+			else
+				num = (num * 10) + (*(s + itr) - 48);
 			flag = 1;
 		}
 		if (flag == 1 && (*(s + itr) < '0' || *(s + itr) > '9'))
 			break;
 		itr++;
 	}
-	if (mines % 2 != 0)
-		return (-1 * num);
 	return (num);
 }
