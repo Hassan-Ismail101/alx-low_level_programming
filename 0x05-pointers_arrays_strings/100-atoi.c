@@ -25,7 +25,7 @@ int _atoi(char *s)
 		if (*(s + itr) >= '0' && *(s + itr) <= '9')
 		{
 			if (mines % 2 != 0)
-				num = (num * 10) - (*(s +itr) - 48);
+				num = (num * 10) - (*(s + itr) - 48);
 			else
 				num = (num * 10) + (*(s + itr) - 48);
 			flag = 1;
