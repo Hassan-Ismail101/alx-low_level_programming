@@ -13,7 +13,7 @@ void puts2(char *str)
 	while (*(str + counter) != '\0')
 	{
 		_putchar(*(str + counter));
-		if (*(str + counter) == '\0')
+		if (*(str + counter + 1) == '\0')
 			break;
 		counter += 2;
 	}
