@@ -10,9 +10,9 @@ void print_rev(char *s)
 	int counter;
 
 	counter = 0;
-	while (*(str + counter) != '\0')
+	while (*(s + counter) != '\0')
 		counter++;
 	while (counter--)
-		_putchar(*(str + counter));
+		_putchar(*(s + counter));
 	_putchar('\n');
 }
