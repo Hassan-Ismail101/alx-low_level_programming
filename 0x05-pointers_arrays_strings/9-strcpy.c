@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * _strcpy - copies the string pointed to by src to the buffer pointed to by dest
+ * _strcpy - copies the string pointed to by src to the buffer
+ * pointed to by dest
  * @dest: pointer to string
  * @src: pointer to string
  *
  * Return: pointer to the string in the buffer
  */
 
-char* _strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
-	if (dest != NULL && src != NULL)
+	if (dest != 0 && src != 0)
 	{
 		int itr;
 
@@ -24,5 +25,5 @@ char* _strcpy(char *dest, char *src)
 		return (dest);
 	}
 	else
-		return (NULL);
+		return (0);
 }
