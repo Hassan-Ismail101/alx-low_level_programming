@@ -13,6 +13,6 @@ int main(void)
 	time_t t;
 
 	srand((unsigned) time(&t));
-	printf("%d", rand());
+	printf("%d", rand() % 1000);
 	return (0);
 }
