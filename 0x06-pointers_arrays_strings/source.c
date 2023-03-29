@@ -4,31 +4,6 @@
 int main(void)
 {
 	/*
-	char s1[98] = "Hello ";
-	char s2[] = "World!\n";
-	char *ptr;
-
-	printf("############### Number 0-strcat ################\n");
-	printf("%s\n",s1);
-	printf("%s", s2);
-	ptr = _strcat(s1, s2);
-	printf("%s",s1);
-        printf("%s", s2);
-	printf("%s", ptr);
-	printf("\n############### Number 1-strncat ################\n");
-	char s11[98] = "Hello ";
-	char s21[] = "World!\n";
-
-	printf("%s\n",s11);
-        printf("%s", s21);
-        ptr = _strncat(s11, s21, 1);
-        printf("%s\n",s11);
-        printf("%s", s21);
-        printf("%s\n", ptr);
-	ptr = _strncat(s11, s21, 1024);
-        printf("%s",s11);
-        printf("%s", s21);
-        printf("%s", ptr);
 	printf("\n############### Number 2-strncpy ################\n");
 	int i;
 
@@ -51,13 +26,6 @@ int main(void)
 		printf("0x%02x", s1[i]);
 	}
 	printf("\n");
-	printf("\n############### Number 3-strcmp ################\n");
-	char s3[] = "Hello";
-	char s4[] = "World!";
-	
-	printf("%d\n", _strcmp(s3, s4));
-	printf("%d\n", _strcmp(s4, s3));
-	printf("%d\n", _strcmp(s3, s3));
 	printf("\n############### Number 4-reverse array ################\n");
 	int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
 	int itr4;
@@ -84,31 +52,27 @@ int main(void)
                 itr4++;
         }
         printf("\n");
-
-	printf("\n############### Number 5-Always look up ################\n");
-	char str[] = "Look up!\n";
-	char *ptr4;
-
-	ptr4 = string_toupper(str);
-	printf("%s", ptr4);
-	printf("%s", str);
 	*/
 
-	printf("\n############### Number 6-Capitalize String ################\n");
-	char str6[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-	char *ptr6;
-
-	ptr6 = cap_string(str6);
-	printf("%s", ptr6);
-	printf("%s", str6);
-
-	printf("\n############### Number 7-Leet ################\n");
-	char s7[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+	printf("\n############### Number 8-rot13 ################\n");
+	char s7[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
 	char *p;
 
-	p = leet(s7);
+	p = rot13(s7);
 	printf("%s", p);
+	printf("---------------------------------------------------------------------------------------\n");
 	printf("%s", s7);
+	printf("---------------------------------------------------------------------------------------\n");p = rot13(s7);
+        printf("%s", p);
+        printf("---------------------------------------------------------------------------------------\n");
+        printf("%s", s7);
+        printf("---------------------------------------------------------------------------------------\n");
+	p = rot13(s7);
+        printf("%s", p);
+        printf("---------------------------------------------------------------------------------------\n");
+        printf("%s", s7);
+        printf("---------------------------------------------------------------------------------------\n");
+
 
 	return (0);
 }
