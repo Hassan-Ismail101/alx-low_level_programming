@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strncpy - copy @n bytes from @src string to @dest
@@ -10,22 +11,24 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	if (n > 0)
-	{
-		int destLen;
-		int itr;
+	int itr;
+	int flag = 0;
 
-		destLen = 0;
-		while (*(dest + destLen) != '\0')
-			destLen++;
-		itr = 0;
-		while (itr < n)
+	itr = 0;
+	while (itr < n)
+	{
+		if (*(src + itr) != '\0' && flag == 0)
 		{
 			*(dest + itr) = *(src + itr);
-			itr++;
 		}
-		if (n > destLen)
-			*(dest + itr) = '\0';
+		else
+		{
+			*(dest + itr) = 0;
+			flag = 1;
+		}
+		printf("%d -> %02x,   ", itr, *(dest + itr));
+		itr++;
 	}
+	
 	return (dest);
 }
