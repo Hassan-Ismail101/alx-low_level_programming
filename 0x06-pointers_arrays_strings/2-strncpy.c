@@ -26,9 +26,7 @@ char *_strncpy(char *dest, char *src, int n)
 			*(dest + itr) = 0;
 			flag = 1;
 		}
-		printf("%d -> %02x,   ", itr, *(dest + itr));
 		itr++;
 	}
-	
 	return (dest);
 }
