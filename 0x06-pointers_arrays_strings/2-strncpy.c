@@ -15,7 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 		//int destLen;
 		int itr;
 		
-		destLen = 0;
+		//destLen = 0;
 		itr = 0;
 		//while (*(dest + destLen) != '\0')
 		//	destLen++;
