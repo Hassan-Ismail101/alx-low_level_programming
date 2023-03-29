@@ -11,7 +11,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int n1Itr = 0, n2Itr = 0, rItr, digBuf = 0, sum = 0;
+	int n1Itr = 0, n2Itr = 0, rItr, digBuf = 0, sum = 0, itr = 0;
 
 	*(r + size_r) = '\0';
 	while (*(n1 + n1Itr) != '\0')
@@ -36,15 +36,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			digBuf = 0;
 		}
 		digBuf = sum / 10;
-		//printf("in loop %dDigbuf: %d\n", rItr, digBuf);
 		*(r + rItr--) = (sum % 10) + '0';
 	}
 	if (digBuf)
-	{
-		//printf("digBuf: %d\n", digBuf);
 		*(r + rItr--) = digBuf + '0';
-	}
 	if (n1Itr > -1 || n2Itr > -1 || rItr < 0)
 		return (0);
-	return (r + rItr + 1);
+	while (*(r + itr) != '\0')
+		*(r + itr++) = *(r + ++rItr);
+	return (r);
 }
