@@ -12,18 +12,14 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	if (n > 0)
 	{
-		//int destLen;
 		int itr;
-		
-		//destLen = 0;
+
 		itr = 0;
-		//while (*(dest + destLen) != '\0')
-		//	destLen++;
 		while (itr < n)
 		{
 			*(dest + itr) = *(src + itr);
 			itr++;
 		}
-		return (dest);
 	}
+	return (dest);
 }
