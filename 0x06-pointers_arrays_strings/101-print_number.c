@@ -9,12 +9,15 @@
 void print_number(int n)
 {
 	int flag;
+	int negative = 0;
 	int part = 1000000000;
 
 	flag = 0;
 	if (n < 0)
 	{
 		_putchar('-');
+		n++;
+		negative = 1;
 		n *= -1;
 	}
 	while (part >= 10)
@@ -26,5 +29,5 @@ void print_number(int n)
 		n %= part;
 		part /= 10;
 	}
-	_putchar(n + '0');
+	_putchar(n + '0' + negative);
 }
