@@ -40,9 +40,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	if (digBuf)
 		*(r + rItr--) = digBuf + '0';
-	if (n1Itr > -1 || n2Itr > -1 || rItr < 0)
+	if (n1Itr > -1 || n2Itr > -1 || rItr < -1)
 		return (0);
-	while (*(r + itr) != '\0')
-		*(r + itr++) = *(r + ++rItr);
+	while (*(r + ++rItr) != '\0')
+		*(r + itr++) = *(r + rItr);
+	*(r + itr) = *(r + rItr);
 	return (r);
 }
