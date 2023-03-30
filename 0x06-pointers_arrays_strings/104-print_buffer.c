@@ -29,7 +29,10 @@ void print_buffer(char *b, int size)
 					continue;
 				}
 				printf("%02x", *(b + itr + loop));
-				printf("%02x ", *(b + itr + loop + 1));
+				if ((itr + loop + 1) < size)
+					printf("%02x ", *(b + itr + loop + 1));
+				else
+					printf("   ");
 			}
 			for (loop = 0; loop < 10; loop++)
 			{
