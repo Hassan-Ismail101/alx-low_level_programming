@@ -1,9 +1,11 @@
 #include "main.h"
 /**
  * _memset - used to fullfill string @s with char @b
+ * @s: The string to be edit
  * @b: The char to full with
  * @n: number of bytes
- * return: the string after replacing
+ *
+ * Return: the string @s after replacing
  */
 char *_memset(char *s, char b, unsigned int n)
 {
