@@ -1,0 +1,1 @@
+last pointer alive
