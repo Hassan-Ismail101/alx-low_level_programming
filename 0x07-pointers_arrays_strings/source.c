@@ -33,10 +33,26 @@ int main(void)
 	char *s = "hello";
 	char *f;
 
-	f = _strchr(s, 'l');
+/*	f = _strchr(s, 'l');
 	if (f != NULL)
 	{
-		printf("%s\n", f);
+		printf("%s\n%s\n", f, s);
 	}
+	f = _strchr(s, 'e');
+        if (f != NULL)
+        {
+               printf("%s\n%s\n", f, s);
+        }
+	f = _strchr(s, 'h');
+        if (f != NULL)
+        {
+                printf("%s\n%s\n", f, s);
+        }*/
+	f = _strchr(s, '\0');
+        if (f != NULL)
+        {
+                printf("%s\n", f);
+        }
+
 	return (0);
 }
