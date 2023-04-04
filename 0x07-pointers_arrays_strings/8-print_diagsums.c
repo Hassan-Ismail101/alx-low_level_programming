@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_diagsums - return the summation of the two diagonal of array
  * @a: the 2D array
@@ -6,7 +7,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	unsigned int diagonalItr;
+	int diagonalItr;
 	int diagSum;
 	int revDiaSum;
 
