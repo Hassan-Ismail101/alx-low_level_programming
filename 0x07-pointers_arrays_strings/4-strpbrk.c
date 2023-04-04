@@ -1,30 +1,28 @@
 #include "main.h"
 /**
- * _strspn - find the lenght of substring
+ * _strpbrk - find the substring after the first occurrence of @accept
  * @s: The string
  * @accept: the substring
- * Return: the number of bytes
+ * Return: the substring
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	char freq[125] = {0};
+	unsigned int itra;
 	unsigned int itr;
-	unsigned int counter;
 
 	itr = 0;
-	while (*(accept + itr) != '\0')
-	{
-		if (!freq[*(accept + itr)])
-			freq[*(accept + itr)] = itr;
-	}
-	itr = 0;
-	counter = 0;
 	while (*(s + itr) != '\0')
 	{
-		if (freq[*(s + itr)])
-			counter++;
-		else
-			return (counter);
+		itra = 0;
+		while (*(accept + itra) != '\0')
+		{
+			if (*(s + itr) == *(accept + itra))
+			{
+				return (s + itr);
+			}
+			itra++;
+		}
+		itr++;
 	}
-	return (counter);
+	return (NULL);
 }
