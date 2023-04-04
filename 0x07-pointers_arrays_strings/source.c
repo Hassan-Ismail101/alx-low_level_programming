@@ -30,12 +30,16 @@ int main(void)
 	printf("---------------------------------------------\n");
 	simple_print_buffer(buffer, 98);
 	*/
-	char *s = "heworlllo,w wworldhello";
-	char *f = "world";
-	char *t;
-	
-	t = _strstr(s, f);
-	if (t != NULL)
-		printf("%s\n", t);
+	char board[8][8] = {
+		{'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+		{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+		{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+		{'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+	};
+	print_chessboard(board);
 	return (0);
 }
