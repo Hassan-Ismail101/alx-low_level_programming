@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * _strstr - find the first occurrence of substring @needle and return the address
+ * _strstr - find the first occurrence of
+ * \substring @needle and return the address
  * @haystack: The string
  * @needle: the substring
  * Return: the substring
@@ -18,8 +19,7 @@ char *_strstr(char *haystack, char *needle)
 		flag = 1;
 		while (*(needle + itra) != '\0')
 		{
-			if (*(haystack + itr + itra) != *(needle + itra) && 
-					*(haystack + itr + itra) != '\0')
+			if (*(haystack + itr + itra) != *(needle + itra))
 			{
 				flag = 0;
 				break;
