@@ -30,29 +30,11 @@ int main(void)
 	printf("---------------------------------------------\n");
 	simple_print_buffer(buffer, 98);
 	*/
-	char *s = "hello";
-	char *f;
-
-/*	f = _strchr(s, 'l');
-	if (f != NULL)
-	{
-		printf("%s\n%s\n", f, s);
-	}
-	f = _strchr(s, 'e');
-        if (f != NULL)
-        {
-               printf("%s\n%s\n", f, s);
-        }
-	f = _strchr(s, 'h');
-        if (f != NULL)
-        {
-                printf("%s\n%s\n", f, s);
-        }*/
-	f = _strchr(s, '\0');
-        if (f != NULL)
-        {
-                printf("%s\n", f);
-        }
-
+	char *s = "hello, world";
+	char *f = "olehw";
+	unsigned int n;
+	
+	n = _strspn(s, f);
+	printf("%u\n", n);
 	return (0);
 }
