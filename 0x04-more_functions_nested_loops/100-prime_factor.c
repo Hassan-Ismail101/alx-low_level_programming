@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 /**
  * prime - check if the number is prime
  * @num: the number to be checked
@@ -13,11 +12,9 @@ int prime(long long num)
 		return (0);
 	int flag;
 	int counter;
-	int limit;
 
-	limit = (int) ceil(sqrt((double) num));
 	flag = 1;
-	for (counter = 2; counter <= limit; counter++)
+	for (counter = 2; counter < num / 2; counter++)
 		if (num % counter == 0)
 			return (0);
 	return (1);
@@ -33,7 +30,7 @@ int main(void)
 	long long counter;
 
 	num = 612852475143;
-	for (counter = (num / 2) + 1; counter > 2; counter -= 2)
+	for (counter = (num / 2); counter > 2; counter--)
 	{
 		if (num % counter == 0)
 		{
