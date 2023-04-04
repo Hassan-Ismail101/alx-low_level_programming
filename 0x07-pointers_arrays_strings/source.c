@@ -22,14 +22,6 @@ void simple_print_buffer(char *buffer, unsigned int size)
 int main(void)
 {
 	/*
-	char buffer[98] = {0x00};
-	char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-
-	simple_print_buffer(buffer, 98);
-	_memcpy(buffer + 50, buffer2, 10);
-	printf("---------------------------------------------\n");
-	simple_print_buffer(buffer, 98);
-	*/
 	int c3[3][3] = {
 		{0, 1, 5},
 		{10, 11, 12},
@@ -37,6 +29,11 @@ int main(void)
 	};
 	int c1[1][1] = {{1}};
 	print_diagsums((int *)c3, 3);
-	print_diagsums((int *)c1, 1);
+	print_diagsums((int *)c1, 1);*/
+	char *s0 = "Bob Dylan";
+	char *s1 = "Robert Allen";
+	printf("%s, %s\n", s0, s1);
+	set_string(&s1, s0);
+	printf("%s, %s\n", s0, s1);
 	return (0);
 }
