@@ -30,11 +30,12 @@ int main(void)
 	printf("---------------------------------------------\n");
 	simple_print_buffer(buffer, 98);
 	*/
-	char *s = "hello, world";
+	char *s = "heworlllo,w wworldhello";
 	char *f = "world";
 	char *t;
 	
-	t = _strpbrk(s, f);
-	printf("%s\n", t);
+	t = _strstr(s, f);
+	if (t != NULL)
+		printf("%s\n", t);
 	return (0);
 }
