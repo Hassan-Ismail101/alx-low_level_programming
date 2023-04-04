@@ -15,7 +15,7 @@ void print_diagsums(int *a, int size)
 	revDiaSum = 0;
 	diagonalItr = 0;
 	revDiagonalItr = size - 1;
-	while (diagonalItr <= size * size - 1)
+	while (diagonalItr <= (size * size) - 1)
 	{
 		diagSum += *(a + diagonalItr);
 		revDiaSum += *(a + revDiagonalItr);
