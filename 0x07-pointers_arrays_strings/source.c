@@ -30,7 +30,7 @@ int main(void)
 	printf("---------------------------------------------\n");
 	simple_print_buffer(buffer, 98);
 	*/
-	char *s = "hello, world";
+	char *s = "heelloo, world";
 	char *f = "olehw";
 	unsigned int n;
 	
