@@ -35,6 +35,8 @@ int main(void)
 		{10, 11, 12},
 		{1000, 101, 102},
 	};
-	print_diagsums((int *)c3, 0);
+	int c1[1][1] = {{1}};
+	print_diagsums((int *)c3, 3);
+	print_diagsums((int *)c1, 1);
 	return (0);
 }
