@@ -6,6 +6,11 @@
  */
 void print_diagsums(int *a, int size)
 {
+	if (size == 0)
+	{
+		printf("\n");
+		return;
+	}
 	unsigned int diagonalItr;
 	long long diagSum;
 	unsigned int revDiagonalItr;

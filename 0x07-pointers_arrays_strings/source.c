@@ -35,6 +35,6 @@ int main(void)
 		{10, 11, 12},
 		{1000, 101, 102},
 	};
-	print_diagsums((int *)c3, 3);
+	print_diagsums((int *)c3, 0);
 	return (0);
 }
