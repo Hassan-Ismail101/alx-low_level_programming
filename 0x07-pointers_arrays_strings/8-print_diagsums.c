@@ -7,8 +7,8 @@
 void print_diagsums(int *a, int size)
 {
 	unsigned int diagonalItr;
-	long long diagSum;
-	long long revDiaSum;
+	int diagSum;
+	int revDiaSum;
 
 	diagSum = 0;
 	revDiaSum = 0;
@@ -20,5 +20,5 @@ void print_diagsums(int *a, int size)
 		a += size;
 		diagonalItr++;
 	}
-	printf("%lld, %lld\n", diagSum, revDiaSum);
+	printf("%d, %d\n", diagSum, revDiaSum);
 }
