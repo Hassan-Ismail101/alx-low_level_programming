@@ -1,14 +1,15 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * string_end - get the address of last letter in string
+ * string_length - get the length of @s string
  * @s: the string
- * Return: the address of the last char
+ * Return: the length of a string @s
  */
-char *string_end(char *s)
+int string_length(char *s)
 {
 	if (*s == '\0')
-		return (s - 1);
-	string_end(s + 1);
+		return (0);
+	return (1 + string_length(s + 1));
 }
 /**
  * my_palidrome - check if the string is palindrome or not
@@ -30,7 +31,9 @@ int my_palidrome(char *start, char *end)
 int is_palindrome(char *s)
 {
 	char *e;
+	int len;
 
-	e = string_end(s);
+	len = string_length(s);
+	e = s + len - 1;
 	return (my_palidrome(s, e));
 }
