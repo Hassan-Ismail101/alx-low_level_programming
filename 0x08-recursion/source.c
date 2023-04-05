@@ -15,30 +15,22 @@ int main(void)
 	printf("################### number4 #################\n");
 	int r;
 
-	r = factorial(1);
+	r = is_prime_number(1);
 	printf("%d\n", r);
-	r = factorial(5);
+	r = is_prime_number(1024);
+	printf("%d\n", r);
+	r = is_prime_number(16);
+	printf("%d\n", r);
+	r = is_prime_number(17);
         printf("%d\n", r);
-	r = factorial(10);
+        r = is_prime_number(25);
         printf("%d\n", r);
-	r = factorial(-1024);
+        r = is_prime_number(-1);
         printf("%d\n", r);
-	r = factorial(0);
+	r = is_prime_number(113);
         printf("%d\n", r);
-	printf("################### number5 #################\n");
-	r = _pow_recursion(1, 10);
+        r = is_prime_number(7919);
         printf("%d\n", r);
-        r = _pow_recursion(5, 0);
-        printf("%d\n", r);
-        r = _pow_recursion(2, 16);
-        printf("%d\n", r);
-        r = _pow_recursion(-5, 2);
-        printf("%d\n", r);
-        r = _pow_recursion(5, -2);
-        printf("%d\n", r);
-	r = _pow_recursion(-5, 3);
-        printf("%d\n", r);
-
 
 	return (0);
 }
