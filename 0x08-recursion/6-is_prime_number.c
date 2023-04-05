@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * my_prime - check if the number is prime with increment of
+ * the domenator
+ * @n: the number
+ * @divide: the dominator
+ * Return: True if the number is prime and false if not
+ */
 int my_prime(int n, int divide)
 {
 	if (divide == 1)
