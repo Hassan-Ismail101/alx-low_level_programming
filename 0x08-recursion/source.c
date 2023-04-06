@@ -15,14 +15,23 @@ int main(void)
 	printf("################### number4 #################\n");
 	int r;
 
-	r = is_palindrome("level");
+	r = _sqrt_recursion(1);
 	printf("%d\n", r);
-	r = is_palindrome("redder");
+	r = _sqrt_recursion(1024);
 	printf("%d\n", r);
-	r = is_palindrome("test");
+	r = _sqrt_recursion(16);
 	printf("%d\n", r);
-	r = is_palindrome("");
+	r = _sqrt_recursion(25);
         printf("%d\n", r);
+	r = _sqrt_recursion(169);
+        printf("%d\n", r);
+        r = _sqrt_recursion(-25);
+        printf("%d\n", r);
+	r = _sqrt_recursion(0);
+        printf("%d\n", r);
+        r = _sqrt_recursion(24);
+        printf("%d\n", r);
+
 
 	return (0);
 }
