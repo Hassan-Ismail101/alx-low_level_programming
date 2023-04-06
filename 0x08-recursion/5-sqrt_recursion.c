@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * my_prime - check if the number is prime with increment of
- * the domenator
+ * my_square - check the number with the square of its factors
  * @n: the number
  * @divide: the dominator
- * Return: True if the number is prime and false if not
+ * Return: True if the number is equal to the square of its
+ * factor and false if not
  */
 int my_square(int n, int divide)
 {
@@ -16,7 +16,7 @@ int my_square(int n, int divide)
 	return (0 + my_square(n, divide + 1));
 }
 /**
- * is_prime_number - check if the number is prime or not
+ * _sqrt_recursion - check if the square root of the number is natural
  * @n: the number
  * Return: true if prime and false if not
  */
