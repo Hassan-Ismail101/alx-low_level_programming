@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * str_into_int - used to convert from string to integer
+ * @str: the string
+ * Return: integer value
+ */
 int str_into_int(char *str)
 {
 	int value;
@@ -22,7 +27,7 @@ int str_into_int(char *str)
 			value += (*(str + itr) - 48);
 		itr++;
 	}
-	return value;
+	return (value);
 }
 /**
  * main - entry point
