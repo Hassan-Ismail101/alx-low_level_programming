@@ -13,8 +13,6 @@ char *str_concat(char *s1, char *s2)
 	int itr2;
 	char *ptr;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
 	itr1 = 0;
 	if (s1 == NULL)
 		itr1 = 0;
