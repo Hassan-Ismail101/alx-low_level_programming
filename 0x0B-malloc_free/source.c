@@ -39,13 +39,18 @@ int main(int ac, char *av[])
 {
 	char *s;
 	int **grid;
+	int h;
+	int w;
 
+	h = 20;
+	w = 20;
 	printf("########### number 3 #############\n");
-	grid = alloc_grid(48, 32);
+	grid = alloc_grid(h, w);
 	if (grid == NULL)
 		return (1);
-	print_grid(grid, 40, 32);
+	print_grid(grid, h, w);
 	printf("\n");
+	free_grid(grid, w);
 	s = argstostr(ac, av);
 	if (s == NULL)
 		return (1);
