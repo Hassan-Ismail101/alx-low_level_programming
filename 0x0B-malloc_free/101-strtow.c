@@ -9,7 +9,7 @@ char **strtow(char *str)
 {
 	char **ptr;
 
-	str = NULL;	
-	ptr = NULL;
+	str = "hello";	
+	ptr = (int **)malloc(sizeof(int *));
 	return(NULL);
 }
