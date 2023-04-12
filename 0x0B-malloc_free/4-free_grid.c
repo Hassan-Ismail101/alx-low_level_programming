@@ -7,5 +7,6 @@
  */
 void free_grid(int **grid, int height)
 {
-
+	height = 0;
+	grid = NULL;
 }
