@@ -41,10 +41,10 @@ int main(int ac, char *av[])
 	int **grid;
 
 	printf("########### number 3 #############\n");
-	grid = alloc_grid(6, 4);
+	grid = alloc_grid(48, 32);
 	if (grid == NULL)
 		return (1);
-	print_grid(grid, 6, 4);
+	print_grid(grid, 48, 32);
 	printf("\n");
 	grid[0][3] = 98;
 	grid[3][4] = 402;
