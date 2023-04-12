@@ -38,9 +38,9 @@ void simple_print_buffer(char *buffer, unsigned int size)
 int main(int ac, char *av[])
 {
 	char *s;
+	int **grid;
 
 	printf("########### number 3 #############\n");
-	/*
 	grid = alloc_grid(6, 4);
 	if (grid == NULL)
 		return (1);
@@ -49,7 +49,6 @@ int main(int ac, char *av[])
 	grid[0][3] = 98;
 	grid[3][4] = 402;
 	print_grid(grid, 6, 4);
-	*/
 	s = argstostr(ac, av);
 	if (s == NULL)
 		return (1);
