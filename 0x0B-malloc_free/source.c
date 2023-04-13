@@ -19,6 +19,13 @@ void print_grid(int **grid, int width, int height)
 		h++;
 	}
 }
+void print_tab(char **tab)
+{
+	int i;
+
+	for (i = 0; tab[i] != NULL; ++i)
+		printf("%s\n", tab[i]);
+}
 void simple_print_buffer(char *buffer, unsigned int size)
 {
 	unsigned int i;
@@ -35,8 +42,9 @@ void simple_print_buffer(char *buffer, unsigned int size)
 	}
 	printf("\n");
 }
-int main(int ac, char *av[])
+int main(void)
 {
+	/*
 	char *s;
 	int **grid;
 	int h;
@@ -55,6 +63,15 @@ int main(int ac, char *av[])
 	if (s == NULL)
 		return (1);
 	printf("%s", s);
-	free(s);
+	free(s);*/
+	char **tab;
+
+	tab = strtow("          ALX School                     #cisfun    ");
+	if (tab == NULL)
+	{
+		printf("Failed\n");
+		return (1);
+	}
+	print_tab(tab);
 	return (0);
 }
