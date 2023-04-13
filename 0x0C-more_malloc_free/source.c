@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-void simple_print_buffer(char *buffer, unsigned int size)
+void simple_print_buffer(int *buffer, unsigned int size)
 {
 	unsigned int i;
 
@@ -27,6 +27,7 @@ int main(void)
 	double *d;
 	char *concat;
 	char *a;
+	int *b;
 
 	c = malloc_checked(sizeof(char) * 1024);
 	printf("%p\n", (void *)c);
@@ -46,7 +47,12 @@ int main(void)
 	a = _calloc(98, sizeof(char));
 	strcpy(a + 4, " School! :)\n");
 	a[97] = '!';
+	/*
 	simple_print_buffer(a, 98);
+	*/
 	free(a);
+	b = array_range(0, 10);
+	simple_print_buffer(b, 11);
+	free(b);
 	return (0);
 }
