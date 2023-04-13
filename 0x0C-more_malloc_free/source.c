@@ -10,6 +10,7 @@ int main(void)
 	int *i;
 	float *f;
 	double *d;
+	char *concat;
 
 	c = malloc_checked(sizeof(char) * 1024);
 	printf("%p\n", (void *)c);
@@ -23,10 +24,8 @@ int main(void)
 	free (i);
 	free (f);
 	free (d);
-	/*
-	concat = string_nconcat("Best ", "School !!!", 6);
+	concat = string_nconcat("Best ", "School !", 10);
 	printf("%s\n", concat);
 	free(concat);
-	*/
 	return (0);
 }
