@@ -37,22 +37,26 @@ int root(double n)
  * @num: the number to be checked
  * Return: 1 if prime and 0 if not
  */
-int prime(long long num)
+int prime(long int num)
 {
-	if (num == 2)
-		return (1);
-	if (num == 1)
-		return (0);
-	int flag;
-	int counter;
-	int limit;
+	int max, i;
 
-	limit = root(num);
-	flag = 1;
-	for (counter = 2; counter <= limit; counter++)
-		if (num % counter == 0)
-			return (0);
-	return (1);
+	while (num % 2 == 0)
+	{
+		max = 2;
+		num /= 2;
+	}
+	for (i = 3; i < root(num); i += 2)
+	{
+		while (num % i == 0)
+		{
+			max = i;
+			num /= i;
+		}
+	}
+	if (num > 2)
+		max = num;
+	return (max);
 }
 /**
  * main - entry point
@@ -61,22 +65,11 @@ int prime(long long num)
  */
 int main(void)
 {
-	long long num;
-	long long counter;
-	long long start;
+	long int num;
+	int maxPrime;
 
 	num = 612852475143;
-	start = root(num);
-	for (counter = start; counter < num / 2; counter++)
-	{
-		if (num % counter == 0)
-		{
-			if (prime(counter))
-			{
-				printf("%lld\n", counter);
-				break;
-			}
-		}
-	}
+	maxPrime = prime(num);
+	printf("%d\n", maxPrime);
 	return (0);
 }
