@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * root - function used to find the root of number
+ * @n: the number
+ * Return: the square root of @n
+ */
 int root(double n)
 {
 	double low;
