@@ -1,1 +1,1 @@
-Let's code in C
+variadic function
