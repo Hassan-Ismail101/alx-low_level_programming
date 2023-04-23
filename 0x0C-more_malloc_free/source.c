@@ -51,8 +51,8 @@ int main(void)
 	simple_print_buffer(a, 98);
 	*/
 	free(a);
-	b = array_range(1, 1);
-	simple_print_buffer(b, 2);
+	b = array_range(0, 98);
+	simple_print_buffer(b, 99);
 	free(b);
 	return (0);
 }
