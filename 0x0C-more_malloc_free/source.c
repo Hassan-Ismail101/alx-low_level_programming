@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-void simple_print_buffer(int *buffer, unsigned int size)
+void simple_print_buffer(char *buffer, unsigned int size)
 {
 	unsigned int i;
 
@@ -21,38 +21,17 @@ void simple_print_buffer(int *buffer, unsigned int size)
 }
 int main(void)
 {
-	char *c;
-	int *i;
-	float *f;
-	double *d;
-	char *concat;
-	char *a;
-	int *b;
+	char *p;
+	int i;
 
-	c = malloc_checked(sizeof(char) * 1024);
-	printf("%p\n", (void *)c);
-	i = malloc_checked(sizeof(int) * 402);
-	printf("%p\n", (void *)i);
-	f = malloc_checked(sizeof(float) * 100000000);
-	printf("%p\n", (void *)f);
-	d = malloc_checked(INT_MAX);
-	printf("%p\n", (void *)d);
-	free (c);
-	free (i);
-	free (f);
-	free (d);
-	concat = string_nconcat("Best ", "School !", 10);
-	printf("%s\n", concat);
-	free(concat);
-	a = _calloc(98, sizeof(char));
-	strcpy(a + 4, " School! :)\n");
-	a[97] = '!';
-	/*
-	simple_print_buffer(a, 98);
-	*/
-	free(a);
-	b = array_range(0, 98);
-	simple_print_buffer(b, 99);
-	free(b);
+	p = malloc(sizeof(char) * 10);
+	p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+	i = 0;
+	while (i < 98)
+	{
+		p[i++] = 98;
+	}
+	simple_print_buffer(p, 98);
+	free(p);
 	return (0);
 }
