@@ -19,10 +19,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	dynOwner = malloc(strlen(owner) + 1);
 	if (dynOwner == NULL)
+	{
+		free(dynName);
 		return (NULL);
+	}
 	ptr = malloc(sizeof(dog_t));
 	if (ptr == NULL)
+	{
+		free(dynName);
+		free(dynOwner);
 		return (NULL);
+	}
 	strcpy(dynName, name);
 	strcpy(dynOwner, owner);
 	ptr->name = dynName;
