@@ -5,7 +5,8 @@
 #include "3-calc.h"
 /**
  * main -entry point
- *
+ * @argc: the number of arguments
+ * @argv: the vector of arguments
  * Return: true success
  */
 int main(int argc, char **argv)
