@@ -22,6 +22,54 @@ int is_digits_only(char *str)
 	}
 	return (len + 1);
 }
+char *mul(char *num1, int len1, char *num2, int len2, int *len4)
+{
+	int itr1, itr2, itr3;
+	char arr[len1 + len2];
+	char *ptr;
+	int sumCarry;
+	int mulCarry;
+	int sum, mul;
+
+	itr3 = 0;
+	while (itr3 < len1 + len2 - 1)
+		arr[itr3++] = '0';
+	arr[itr3] = '\0';
+	itr1 = len1 - 2;
+	itr2 = len2 - 2;
+	itr3 = len1 + len2 - 2;
+	while (itr1 > -1)
+	{
+		sumCarry = 0;
+		mulCarry = 0;
+		itr2 = (len2 - 2);
+	       	itr3 = len1 + len2 - 2 - (len1 - 2 - itr1);
+		while (itr2 > -1)
+		{
+			mul = (num1[itr1] - 48) * (num2[itr2] - 48);
+			sum = arr[itr3] - 48 + mulCarry + sumCarry + (mul % 10);
+			arr[itr3] = sum % 10 + 48;
+			sumCarry = sum / 10;
+			mulCarry = mul / 10;
+			itr2--;
+			itr3--;
+		}
+		arr[itr3] += sumCarry + mulCarry;
+		itr1--;
+	}
+	if (arr[itr3] == '0')
+		itr3++;
+	printf("itr3 :%d\n", itr3);
+	ptr = malloc(sizeof(char) * (len1 + len2 - itr3));
+	*len4 = 0;
+	while (arr[itr3] != '\0')
+	{
+		ptr[(*len4)++] = arr[itr3];
+		itr3++;
+	}	
+	ptr[*(len4)] = '\0';
+	return (ptr);
+}
 /**
  * main - entry point
  * @argc: the number of arguments
@@ -30,7 +78,8 @@ int is_digits_only(char *str)
  */
 int main(int argc, char **argv)
 {
-	printf("argc : %d\n", argc);
+	int len;
+	char *ptr;
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -41,5 +90,8 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
+	ptr = mul(argv[1], is_digits_only(argv[1]), argv[2], is_digits_only(argv[2]), &len);
+	printf("%s\n", ptr);
+	free(ptr);
 	return (0);
 }
