@@ -21,8 +21,9 @@ int abs_is_98(int elem)
 {
 	return (elem == 98 || elem == -98);
 }
-int main(void)
+int main(int argc, char **argv)
 {
+	/*
 	int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
 	int index;
 
@@ -30,5 +31,7 @@ int main(void)
 	printf("%d\n", index);
 	index = int_index(array, 20, abs_is_98);
 	printf("%d\n", index);
+	*/
+	printf("%s\n", rgv[1]);
 	return (0);
 }
