@@ -9,6 +9,7 @@ int main(void)
 	list_t *new;
 	list_t hello = {"World", 5, NULL};
 	size_t n;
+	size_t len;
 
 	head = &hello;
 	new = malloc(sizeof(list_t));
@@ -22,7 +23,8 @@ int main(void)
 	new->next = head;
 	head = new;
 	n = print_list(head);
-	printf("-> %lu elements\n", n);
+	len = list_len(head);
+	printf("-> %lu elements\n", len);
 
 	printf("\n");
 	free(new->str);
