@@ -58,7 +58,12 @@ char **arr_of_string(int word, int wordlen)
 	{
 		*(ptr + itr1D) = (char *)malloc(sizeof(char) * wordlen);
 		if (*(ptr + itr1D) == NULL)
+		{
+			while (itr1D > -1)
+				free(*(ptr + itr1D));
+			free(ptr);
 			return (NULL);
+		}
 	}
 	*(ptr + itr1D) = NULL;
 	return (ptr);
