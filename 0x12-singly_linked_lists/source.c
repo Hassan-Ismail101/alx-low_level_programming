@@ -14,6 +14,7 @@ int main(void)
 	add_node_end(&head, "Augustin");
 	n = print_list(head);
 	printf("-> %lu elements\n", n);
-	free_list(head);	
+	free_list(head);
+		
 	return (0);
 }
