@@ -21,6 +21,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (n1Itr > size_r || n2Itr > size_r)
 		return (0);
 	rItr = size_r - 1;
+	*(r + rItr--) = '\0';
 	n1Itr--;
 	n2Itr--;
 	while ((rItr >= 0) && ((n1Itr >= 0) || (n2Itr >= 0)))

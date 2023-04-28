@@ -9,8 +9,8 @@ int main(void)
 	char *a = "1";
 	char *b = "90000";
 	char r[100];
-	char r2[2];
-	char r3[3];
+	char r2[10];
+	char r3[11];
 	char *res;
 	
 	res = infinite_add(a, b, r, 100);
@@ -22,9 +22,9 @@ int main(void)
 	{
 		printf("%s + %s = %s\n", a, b, res);
 	}
-	n = "01";
-	m = "10";
-	res = infinite_add(n, m, r2, 2);
+	n = "1234567890";
+	m = "1";
+	res = infinite_add(n, m, r2, 10);
         if (res == 0)
         {
                 printf("Error\n");
@@ -33,9 +33,9 @@ int main(void)
         {
                 printf("%s + %s = %s\n", n, m, res);
         }
-	n = "99";
-        m = "99";
-        res = infinite_add(n, m, r2, 2);
+	n = "999999999";
+        m = "1";
+        res = infinite_add(n, m, r2, 10);
         if (res == 0)
         {
                 printf("Error\n");
@@ -44,7 +44,7 @@ int main(void)
         {
                 printf("%s + %s = %s\n", n, m, res);
         }
-	res = infinite_add(n, m, r3, 3);
+	res = infinite_add(n, m, r3, 11);
         if (res == 0)
         {
                 printf("Error\n");
@@ -53,4 +53,5 @@ int main(void)
         {
                 printf("%s + %s = %s\n", n, m, res);
         }
+	return (0);
 }
