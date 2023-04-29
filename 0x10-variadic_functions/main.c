@@ -2,6 +2,6 @@
 #include "variadic_functions.h"
 int main(void)
 {
-	print_all("ceisf", 'c', 7, "Hassan", 3.5);
+	print_all(NULL);
 	return (0);
 }

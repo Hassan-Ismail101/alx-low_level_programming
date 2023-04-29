@@ -52,12 +52,10 @@ void print_all(const char * const format, ...)
 		{'s', print_string},
 		{0, NULL}
 	};
-	if (format == NULL)
-		return;
 	va_start(ptr, format);
 	itr = 0;
 	flag = 0;
-	while (*(format + itr) != '\0')
+	while (format != NULL && *(format + itr) != '\0')
 	{
 		structItr = 0;
 		while (list[structItr].key != *(format + itr) && structItr < 4)
