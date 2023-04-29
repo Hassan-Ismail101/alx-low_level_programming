@@ -8,7 +8,7 @@
  */
 void print_char(va_list *ptr)
 {
-	printf("%c\n", va_arg(*ptr, int));
+	printf("%c", va_arg(*ptr, int));
 }
 /**
  * print_int - print integer
@@ -16,7 +16,7 @@ void print_char(va_list *ptr)
  */
 void print_int(va_list *ptr)
 {
-	printf("%i\n", va_arg(*ptr, int));
+	printf("%i", va_arg(*ptr, int));
 }
 /**
  * print_float - print float number
@@ -24,7 +24,7 @@ void print_int(va_list *ptr)
  */
 void print_float(va_list *ptr)
 {
-	printf("%f\n", (float)va_arg(*ptr, double));
+	printf("%f", (float)va_arg(*ptr, double));
 }
 /**
  * print_string - print string
@@ -34,8 +34,8 @@ void print_string(va_list *ptr)
 {
 	char *str = va_arg(*ptr, char *);
 
-	if (str != NULL || !(printf("(nil)\n")))
-		printf("%s\n", str);
+	if (str != NULL || !(printf("(nil)")))
+		printf("%s", str);
 }
 /**
  * print_all - function like printf with different specifiers
@@ -43,9 +43,8 @@ void print_string(va_list *ptr)
  */
 void print_all(const char * const format, ...)
 {
-	int itr, structItr;
+	int itr, structItr, flag;
 	va_list ptr;
-	list_t *structPtr;
 	list_t list[5] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -55,14 +54,18 @@ void print_all(const char * const format, ...)
 	};
 	va_start(ptr, format);
 	itr = 0;
+	flag = 0;
 	while (*(format + itr) != '\0')
 	{
-		structPtr = list;
-		structItr = 4;
-		while (structPtr->key != *(format + itr) && structItr--)
-			structPtr++;
-		if ((structPtr->funcPtr))
-			(structPtr->funcPtr)(&ptr);
+		structItr = 0;
+		while (list[structItr].key != *(format + itr) && structItr < 4)
+			structItr++;
+		if (list[structItr].funcPtr && (!flag || printf(", ")))
+		{
+			flag = 1;
+			(list[structItr].funcPtr)(&ptr);
+		}
 		itr++;
 	}
+	printf("\n");
 }
