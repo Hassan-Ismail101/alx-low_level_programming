@@ -5,18 +5,20 @@
 
 int main(void)
 {
+	int sum;
 	listint_t *head;
-	listint_t *node;
 
 	head = NULL;
 	add_nodeint_end(&head, 0);
 	add_nodeint_end(&head, 1);
 	add_nodeint_end(&head, 2);
 	add_nodeint_end(&head, 3);
+	add_nodeint_end(&head, 4);
+        add_nodeint_end(&head, 98);
+        add_nodeint_end(&head, 402);
+        add_nodeint_end(&head, 1024);
+	sum = sum_listint(head);
+	printf("sum = %d\n", sum);
 	print_listint(head);
-	node = get_nodeint_at_index(head, 3);
-	printf("->  %d\n", node->n);
-	node = get_nodeint_at_index(head, 4);
-        printf("->  %d\n", node->n);
 	return (0);
 }
