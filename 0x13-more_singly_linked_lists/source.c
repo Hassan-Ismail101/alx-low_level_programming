@@ -5,7 +5,6 @@
 
 int main(void)
 {
-	int sum;
 	listint_t *head;
 
 	head = NULL;
@@ -17,8 +16,17 @@ int main(void)
         add_nodeint_end(&head, 98);
         add_nodeint_end(&head, 402);
         add_nodeint_end(&head, 1024);
-	sum = sum_listint(head);
-	printf("sum = %d\n", sum);
 	print_listint(head);
+	printf("--------------------\n");
+	insert_nodeint_at_index(&head, 5, 4096);
+	print_listint(head);
+	printf("--------------------\n");
+        insert_nodeint_at_index(&head, 0, -1);
+        print_listint(head);
+	printf("--------------------\n");
+        insert_nodeint_at_index(&head, 10, 5000);
+        print_listint(head);
+	free_listint2(&head);
+	printf("%p\n", (void *)head);
 	return (0);
 }

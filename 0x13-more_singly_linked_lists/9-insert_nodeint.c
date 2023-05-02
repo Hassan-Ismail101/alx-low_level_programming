@@ -8,14 +8,14 @@
  */
 listint_t *create_new_node2(const int n)
 {
-        listint_t *new;
+	listint_t *new;
 
-        new = malloc(sizeof(listint_t));
-        if (new == NULL)
-                return (NULL);
-        new->n = n;
-        new->next = NULL;
-        return (new);
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	new->next = NULL;
+	return (new);
 }
 /**
  * insert_nodeint_at_index - add node at idx position
@@ -28,18 +28,39 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *temp;
 	listint_t *new;
+	listint_t *temp2;
 
 	new = create_new_node2(n);
 	if (new == NULL)
 		return (NULL);
 
-	temp = head;
-	while (temp != NULL && index)
+	temp = *head;
+	if (*head == NULL || idx == 0)
+	{
+		if (idx > 0)
+		{
+			free(new);
+			return (NULL);
+		}
+		new->next = *head;
+		*head = new;
+		return (*head);
+	}
+	idx--;
+	while (idx > 0 && temp != NULL)
 	{
 		temp = temp->next;
-		index--;
+		idx--;
 	}
-	if (index)
+	if (idx > 0)
+	{
+		free(new);
 		return (NULL);
-	return (temp);
+	}
+	temp2 = temp;
+	if (temp2 != NULL)
+		temp2 = temp2->next;
+	new->next = temp2;
+	temp->next = new;
+	return (*head);
 }
