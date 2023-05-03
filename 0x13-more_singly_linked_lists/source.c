@@ -5,9 +5,12 @@
 
 int main(void)
 {
-	listint_t *head;
+	
+	listint_t *node;
+	listint_t *head2;
 
-	head = NULL;
+	
+	/*
 	add_nodeint_end(&head, 0);
 	add_nodeint_end(&head, 1);
 	add_nodeint_end(&head, 2);
@@ -18,5 +21,18 @@ int main(void)
         add_nodeint_end(&head, 1024);
 	print_listint_safe(head);
 	printf("-------------------\n");
+	*/
+	head2 = NULL;
+	node = add_nodeint(&head2, 0);
+	add_nodeint(&head2, 1);
+	add_nodeint(&head2, 2);
+	add_nodeint(&head2, 3);
+	add_nodeint(&head2, 4);
+	node->next = add_nodeint(&head2, 98);
+	/*
+	add_nodeint(&head2, 402);
+	add_nodeint(&head2, 1024);
+	*/
+	print_listint_safe(head2);
 	return (0);
 }
