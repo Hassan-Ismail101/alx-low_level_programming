@@ -17,16 +17,37 @@ int main(void)
         add_nodeint_end(&head, 402);
         add_nodeint_end(&head, 1024);
 	print_listint(head);
+	printf("-------------------\n");
+	reverse_listint(&head);
+	print_listint(head);
+	/*
 	printf("--------------------\n");
-	insert_nodeint_at_index(&head, 5, 4096);
+	delete_nodeint_at_index(&head, 5);
+	print_listint(head);
+	printf("---------------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("-------------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("---------------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("----------------------\n");
+	delete_nodeint_at_index(&head, 0);
 	print_listint(head);
 	printf("--------------------\n");
-        insert_nodeint_at_index(&head, 0, -1);
-        print_listint(head);
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
 	printf("--------------------\n");
-        insert_nodeint_at_index(&head, 10, 5000);
-        print_listint(head);
-	free_listint2(&head);
-	printf("%p\n", (void *)head);
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	printf("---------------------\n");
+	delete_nodeint_at_index(&head, 0);
+	print_listint(head);
+	*/
 	return (0);
 }
