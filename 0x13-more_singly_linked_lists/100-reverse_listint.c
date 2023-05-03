@@ -1,7 +1,11 @@
 #include "lists.h"
 #include "stdlib.h"
 #include "stdio.h"
-
+/**
+ * reverse_listint - reverses the list
+ * @head: pointer to the first node
+ * Return: pointer to the new list
+ */
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *temp1;
