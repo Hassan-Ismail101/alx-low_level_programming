@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * set_bit - check the number at specific bit
+ * set_bit - set the number at specific bit
  * @n: the number
  * @index: the index of bit
  * Return: the kind of bit 0 or 1
