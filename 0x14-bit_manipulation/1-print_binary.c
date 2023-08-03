@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 	}
 	while (n >> counter)
 	{
@@ -22,7 +22,10 @@ void print_binary(unsigned long int n)
 	one >>= 1;
 	while (counter)
 	{
-		printf("%d", (one & n) >= 1);
+		if ((one & n) >= 1)
+			_putchar('1');
+		else
+			_putchar('0');
 		one >>= 1;
 		counter--;
 	}
