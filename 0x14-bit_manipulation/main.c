@@ -19,7 +19,9 @@ int main(void)
     printf("\n");
     print_binary((1 << 10) + 1);
     printf("\n");
-    print_binary(INT_MAX);
+    print_binary(ULONG_MAX);
+    printf("\n");
+    print_binary(LONG_MAX);
     printf("\n");
     return (0);
 }
